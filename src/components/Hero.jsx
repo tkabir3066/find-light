@@ -83,10 +83,8 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
 
-                {/* Overlay with gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
-                {/* Slide content */}
                 <div className="absolute bottom-8 left-8 right-8 text-white text-left">
                   <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>
                   <p className="text-sm opacity-90">{slide.description}</p>
@@ -95,17 +93,9 @@ const Hero = () => {
             </SwiperSlide>
           ))}
 
-          {/* Custom Navigation Buttons */}
           <div className="swiper-button-prev !w-10 !h-10 !text-white after:!text-sm !bg-white/20 !rounded-full backdrop-blur-sm hover:!bg-white/30 transition-all"></div>
           <div className="swiper-button-next !w-10 !h-10 !text-white after:!text-sm !bg-white/20 !rounded-full backdrop-blur-sm hover:!bg-white/30 transition-all"></div>
         </Swiper>
-      </div>
-
-      {/* Call to Action Button */}
-      <div className="mt-8">
-        <button className="bg-[#1B5299] text-[#F1ECCE] px-8 py-3 rounded-lg font-semibold hover:bg-[#0d4085] transition-all duration-300 text-lg">
-          Explore Our Services
-        </button>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import Footer from "../Footer";
 
 const Auth_layout = () => {
   return (
-    <div>
+    <div className="md:w-11/12 lg:w-4/5 mx-auto">
       <header>
         <Navbar></Navbar>
       </header>
