@@ -110,7 +110,7 @@ useEffect(() => {
                   alt={service.serviceName}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
+                <div className="absolute inset-0 flex items-end bg-black/50">
                   <div className="p-6 text-white">
                     <div className="flex items-center space-x-3 mb-2">
                       <span className="px-3 py-1 bg-[#1B5299] text-[#F1ECCE] text-xs font-semibold rounded-full uppercase">
