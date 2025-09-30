@@ -1,19 +1,14 @@
-
+import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Hero from "../Hero";
-import { Outlet } from "react-router-dom";
-import Category from "../Category";
 
-const Home_Layout = () => {
+const ContentDetailsPage_Layout = () => {
   return (
     <div className="md:w-11/12 lg:w-4/5 mx-auto">
       <header>
         <Navbar></Navbar>
-        <Hero></Hero>
       </header>
       <section>
-        <Category></Category>
         <Outlet></Outlet>
       </section>
       <footer>
@@ -23,4 +18,4 @@ const Home_Layout = () => {
   );
 };
 
-export default Home_Layout;
+export default ContentDetailsPage_Layout;

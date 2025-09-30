@@ -10,12 +10,20 @@ import Login_Page from "./components/pages/Login_Page.jsx";
 import Register_Page from "./components/pages/Register_Page.jsx";
 import ForgotPassword_Page from "./components/pages/ForgotPassword_Page.jsx";
 import Profile_Page from "./components/pages/Profile_Page.jsx";
+import CategoryBasedContents from "./components/pages/CategoryBasedContents.jsx";
+import ContentDetailsPage_Layout from "./components/layout/ContentDetailsPage_Layout.jsx";
+import ContentDetails from "./components/pages/ContentDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home_Layout></Home_Layout>,
-    children: [],
+    children: [
+      {
+        path:"/",
+        element: <CategoryBasedContents></CategoryBasedContents>
+      }
+    ],
   },
   {
     path:"*",
@@ -44,6 +52,17 @@ const router = createBrowserRouter([
       
 
     ],
+  },
+  {
+    path: "/details",
+    element: <ContentDetailsPage_Layout></ContentDetailsPage_Layout>,
+    children: [
+       {
+    path: "/details/content/:id",
+    element: <ContentDetails></ContentDetails>
+
+  },
+    ]
   }
 ]);
 
