@@ -72,7 +72,6 @@ const Register_Page = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // Show it in the UI
         showError(`Error: ${errorMessage}`);
         showError(`Error: ${errorCode}`);
       });
@@ -86,15 +85,12 @@ const Register_Page = () => {
           `Welcome back, ${user.displayName || user.email}!`,
           "Login Successful"
         );
-        navigate("/"); // Redirect to home page
+        navigate("/");
       })
       .catch((error) => {
         console.error("Google sign-in error:", error);
 
-        // Handle specific errors
         if (error.code === "auth/popup-closed-by-user") {
-          console.log("User closed the popup");
-          // Don't show error for this case as it's user-initiated
         } else if (error.code === "auth/popup-blocked") {
           showError(
             "Please allow popups for this website to use Google Sign-In"
@@ -190,7 +186,7 @@ const Register_Page = () => {
                 </button>
               </div>
 
-              {/* Password Requirements (Static Display) */}
+              {/* Password Requirements */}
               <div className="mt-2 space-y-1">
                 <div className="text-xs flex items-center space-x-2 text-[#694D75]">
                   <span className="w-2 h-2 rounded-full bg-[#694D75]"></span>

@@ -26,7 +26,6 @@ const Login_Page = () => {
     const form = new FormData(e.target);
     const email = form.get("email");
     const password = form.get("password");
-    console.log({ email, password });
     loginUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -47,16 +46,14 @@ const Login_Page = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log("Google sign-in successful:", user);
-        navigate("/"); // Redirect to home page
+        navigate("/"); 
       })
       .catch((error) => {
         console.error("Google sign-in error:", error);
 
-        // Handle specific errors
+
         if (error.code === "auth/popup-closed-by-user") {
-          console.log("User closed the popup");
-          // Don't show error for this case as it's user-initiated
+
         } else if (error.code === "auth/popup-blocked") {
           showError(
             "Please allow popups for this website to use Google Sign-In"

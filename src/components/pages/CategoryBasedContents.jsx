@@ -8,7 +8,6 @@ const CategoryBasedContents = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [loading, setLoading] = useState(true);
 
-  // Load data when component starts
   useEffect(() => {
     fetch("/content.json")
       .then((response) => response.json())
@@ -18,7 +17,7 @@ const CategoryBasedContents = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error:", error);
+
         setLoading(false);
       });
   }, []);
@@ -68,7 +67,7 @@ const CategoryBasedContents = () => {
   return (
     <div className="min-h-screen bg-[#F1ECCE] py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Show loading message */}
+
         {loading && (
           <div className="text-center py-20">
             <div className="text-2xl font-bold text-[#331832]">
@@ -77,7 +76,6 @@ const CategoryBasedContents = () => {
           </div>
         )}
 
-        {/* Show content when loaded */}
         {!loading && (
           <>
             {/* Category buttons */}

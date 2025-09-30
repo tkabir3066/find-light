@@ -6,7 +6,6 @@ const Category = ({
   onCategoryChange = () => {},
   serviceCounts = {},
 }) => {
-  // If no categories provided, return null
   if (!categories || categories.length === 0) {
     return null;
   }

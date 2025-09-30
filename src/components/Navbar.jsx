@@ -8,7 +8,6 @@ const Navbar = () => {
   const handleLogout = () => {
     logOut()
       .then(() => {
-        console.log("User logged out successfully");
       })
       .catch((error) => {
         console.error("Logout error:", error);
@@ -46,13 +45,11 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            {/* Conditionally show My Profile in mobile menu */}
             {user && (
               <li>
                 <Link to="/auth/profile">My Profile</Link>
               </li>
             )}
-            {/* Show logout in mobile menu */}
             {user && (
               <li>
                 <button onClick={handleLogout}>Logout</button>
@@ -73,12 +70,6 @@ const Navbar = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          {/* Conditionally show My Profile only when user is logged in */}
-          {/* {user && (
-            <li>
-              <Link to="/auth/profile">My Profile</Link>
-            </li>
-          )} */}
           <li>
             <Link to="/subscription">Subscription</Link>
           </li>
@@ -86,7 +77,6 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        {/* Conditional rendering for login/logout */}
         {user ? (
           <div className="dropdown dropdown-end">
             <div

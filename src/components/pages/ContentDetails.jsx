@@ -22,12 +22,11 @@ const ContentDetails = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error loading service:", error);
         setLoading(false);
       });
   }, [id]);
 
-  // Create star rating
+
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < Math.floor(rating); i++) {
@@ -40,7 +39,7 @@ const ContentDetails = () => {
     return stars;
   };
 
-  // Handle booking button click
+
   const handleBookService = async () => {
     const result = await showConfirm(
       `Book "${service.serviceName}" for ${service.pricing}?`,
@@ -72,7 +71,6 @@ useEffect(() => {
           </div>
         )}
 
-        {/* Show error if service not found */}
         {!loading && !service && (
           <div className="text-center py-20">
             <div className="text-2xl font-bold text-red-600 mb-4">
@@ -87,7 +85,6 @@ useEffect(() => {
           </div>
         )}
 
-        {/* Show service details when loaded */}
         {!loading && service && (
           <>
             {/* Back Button */}

@@ -1,16 +1,54 @@
-# React + Vite
+# Find Light - Career Consulting Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Overview  
+**Find Light** is a modern, responsive career consulting web application designed to help students and professionals discover their true potential, make informed career choices, and achieve their dreams.  
 
-Currently, two official plugins are available:
+The platform offers:  
+- Personalized career counseling  
+- Resume reviews  
+- Interview preparation  
+- And more career-focused services  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠️ Technologies Used  
+- **React** — Frontend library for building user interfaces  
+- **Tailwind CSS** — Utility-first CSS framework for styling  
+- **Firebase** — Backend for authentication and user management  
+- **React Router** — Client-side routing and navigation  
+- **React Icons** — Beautiful vector icons  
+- **SweetAlert2** — Elegant alert and toast notifications  
+- **Swiper.js** — Smooth, responsive image carousel  
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔐 Authentication  
+- Email/Password sign-up, login, and logout (Firebase Authentication)  
+- Google OAuth login integration  
+- User profile management with update capability  
+- Protected routes with a private route wrapper for authenticated users only  
+
+### 💡 User Experience  
+- Fully responsive design with **Tailwind CSS**  
+- Full-page loading indicators with a spinner  
+- Dynamic page titles based on service details  
+- Elegant confirmation modals and success toasts instead of default alerts  
+- Feedback section allowing users to add comments during their session  
+
+### 🧭 Navigation & Routing  
+- Clean and intuitive navigation with **React Router DOM**  
+- Category-based service filtering with dynamic listing  
+- Dynamic routing for service details pages using URL parameters  
+
+### 🎨 Other Features  
+- **Swiper.js** implemented for hero section sliders (fade effect + smooth navigation)  
+- Dark overlay on hero images for better text readability  
+- Services displayed as cards with:  
+  - Category badges  
+  - Pricing  
+  - Simple star ratings  
+- Booking confirmation flow with **SweetAlert2** modals for seamless interactions  
+
+---
