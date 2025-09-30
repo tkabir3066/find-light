@@ -9,6 +9,7 @@ import AuthProvider from "./provider/AuthProvider.jsx";
 import Login_Page from "./components/pages/Login_Page.jsx";
 import Register_Page from "./components/pages/Register_Page.jsx";
 import ForgotPassword_Page from "./components/pages/ForgotPassword_Page.jsx";
+import Profile_Page from "./components/pages/Profile_Page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path:"/auth/login/forgot-password",
         element: <ForgotPassword_Page></ForgotPassword_Page>
+      },
+      {
+        path:"/auth/profile",
+        element: <Profile_Page></Profile_Page>
       }
       
 

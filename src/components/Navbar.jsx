@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        console.log("User logged out successfully");
+      })
+      .catch((error) => {
+        console.error("Logout error:", error);
+      });
+  };
+
   return (
-    <div className="navbar shadow-sm bg-[#1B5299]">
+    <div className="navbar shadow-sm bg-[#1B5299]   ">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -31,10 +45,22 @@ const Navbar = () => {
             style={{ backgroundColor: "#1B5299", color: "#F1ECCE" }}
           >
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
+            {/* Conditionally show My Profile in mobile menu */}
+            {user && (
+              <li>
+                <Link to="/auth/profile">My Profile</Link>
+              </li>
+            )}
+            {/* Show logout in mobile menu */}
+            {user && (
+              <li>
+                <button onClick={handleLogout}>Logout</button>
+              </li>
+            )}
             <li>
-              <a>My Profile</a>
+              <Link to="/subscription">Subscription</Link>
             </li>
           </ul>
         </div>
@@ -46,21 +72,63 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold text-lg text-[#F1ECCE]">
           <li>
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
+          {/* Conditionally show My Profile only when user is logged in */}
+          {/* {user && (
+            <li>
+              <Link to="/auth/profile">My Profile</Link>
+            </li>
+          )} */}
           <li>
-            <a>My Profile</a>
+            <Link to="/subscription">Subscription</Link>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end">
-        <a
-          className="btn border-0"
-          style={{ backgroundColor: "#9FC2CC", color: "#331832" }}
-        >
-          Login
-        </a>
+        {/* Conditional rendering for login/logout */}
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Profile"
+                  src={
+                    user.photoURL ||
+                    "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  }
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-[#9FC2CC]"
+            >
+              <li>
+                <Link to="/auth/profile" className="text-[#331832]">
+                  My Profile
+                </Link>
+              </li>
+              <li>
+                <button onClick={handleLogout} className="text-[#331832]">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link
+            to="/auth/login"
+            className="btn border-0 bg-[#9FC2CC] text-[#331832]"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

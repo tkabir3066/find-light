@@ -1,0 +1,254 @@
+{
+  "careerServices": [
+    {
+      "id": 1,
+      "serviceName": "Career Counseling Sessions",
+      "category": "online",
+      "image": "https://via.placeholder.com/300x200/1B5299/F1ECCE?text=Career+Counseling",
+      "description": "One-on-one personalized career guidance sessions to help you discover your ideal career path and develop actionable strategies.",
+      "pricing": "$89",
+      "duration": "60 minutes",
+      "dateTime": "05-12-24 5:00-6:00 PM",
+      "counselor": {
+        "name": "Dr. Sarah Johnson",
+        "experience": "12 years",
+        "specialization": "Career Transition"
+      },
+      "rating": 4.8,
+      "totalReviews": 245,
+      "features": [
+        "Personality assessment",
+        "Career path mapping",
+        "Goal setting",
+        "Action plan development"
+      ],
+      "tags": ["Career Planning", "Professional Development", "Life Coaching"]
+    },
+    {
+      "id": 2,
+      "serviceName": "Resume Review & Optimization",
+      "category": "online",
+      "image": "https://via.placeholder.com/300x200/694D75/F1ECCE?text=Resume+Review",
+      "description": "Professional resume review and optimization service to make your CV stand out to potential employers.",
+      "pricing": "$45",
+      "duration": "45 minutes",
+      "dateTime": "06-12-24 2:00-2:45 PM",
+      "counselor": {
+        "name": "Mark Thompson",
+        "experience": "8 years",
+        "specialization": "Resume Writing"
+      },
+      "rating": 4.9,
+      "totalReviews": 189,
+      "features": [
+        "ATS optimization",
+        "Content enhancement",
+        "Format improvement",
+        "Industry-specific keywords"
+      ],
+      "tags": ["Resume", "CV", "Job Application"]
+    },
+    {
+      "id": 3,
+      "serviceName": "Interview Preparation Coaching",
+      "category": "online",
+      "image": "https://via.placeholder.com/300x200/9FC2CC/331832?text=Interview+Prep",
+      "description": "Comprehensive interview preparation including mock interviews, question practice, and confidence building techniques.",
+      "pricing": "$75",
+      "duration": "75 minutes",
+      "dateTime": "07-12-24 4:00-5:15 PM",
+      "counselor": {
+        "name": "Lisa Rodriguez",
+        "experience": "10 years",
+        "specialization": "Interview Coaching"
+      },
+      "rating": 4.7,
+      "totalReviews": 156,
+      "features": [
+        "Mock interviews",
+        "Behavioral questions practice",
+        "Body language coaching",
+        "Salary negotiation tips"
+      ],
+      "tags": ["Interview", "Job Search", "Communication Skills"]
+    },
+    {
+      "id": 4,
+      "serviceName": "LinkedIn Profile Optimization",
+      "category": "online",
+      "image": "https://via.placeholder.com/300x200/F1ECCE/1B5299?text=LinkedIn+Optimization",
+      "description": "Professional LinkedIn profile optimization to enhance your online presence and attract recruiters.",
+      "pricing": "$65",
+      "duration": "50 minutes",
+      "dateTime": "08-12-24 1:00-1:50 PM",
+      "counselor": {
+        "name": "David Kim",
+        "experience": "6 years",
+        "specialization": "Digital Branding"
+      },
+      "rating": 4.6,
+      "totalReviews": 134,
+      "features": [
+        "Profile headline optimization",
+        "Summary enhancement",
+        "Skills section improvement",
+        "Network building strategies"
+      ],
+      "tags": ["LinkedIn", "Personal Branding", "Social Media"]
+    },
+    {
+      "id": 5,
+      "serviceName": "Executive Career Consulting",
+      "category": "offline",
+      "image": "https://via.placeholder.com/300x200/331832/F1ECCE?text=Executive+Consulting",
+      "description": "Premium in-person executive career consulting for senior-level professionals seeking strategic career advancement.",
+      "pricing": "$200",
+      "duration": "90 minutes",
+      "dateTime": "10-12-24 3:00-4:30 PM",
+      "counselor": {
+        "name": "Dr. Michael Chen",
+        "experience": "15 years",
+        "specialization": "Executive Leadership"
+      },
+      "rating": 5.0,
+      "totalReviews": 87,
+      "features": [
+        "Executive assessment",
+        "Leadership development",
+        "Strategic career planning",
+        "Board readiness preparation"
+      ],
+      "tags": ["Executive", "Leadership", "C-Suite"],
+      "location": "Downtown Business Center, Suite 1204"
+    },
+    {
+      "id": 6,
+      "serviceName": "Career Change Workshop",
+      "category": "offline",
+      "image": "https://via.placeholder.com/300x200/1B5299/F1ECCE?text=Career+Change",
+      "description": "Intensive workshop for professionals looking to make a significant career transition with hands-on activities and personalized guidance.",
+      "pricing": "$150",
+      "duration": "3 hours",
+      "dateTime": "12-12-24 9:00 AM-12:00 PM",
+      "counselor": {
+        "name": "Jennifer Walsh",
+        "experience": "11 years",
+        "specialization": "Career Transition"
+      },
+      "rating": 4.8,
+      "totalReviews": 112,
+      "features": [
+        "Skills assessment",
+        "Industry exploration",
+        "Transition planning",
+        "Networking strategies"
+      ],
+      "tags": ["Career Change", "Workshop", "Transition"],
+      "location": "Professional Development Center, Room A"
+    },
+    {
+      "id": 7,
+      "serviceName": "University Career Guidance",
+      "category": "offline",
+      "image": "https://via.placeholder.com/300x200/694D75/F1ECCE?text=University+Guidance",
+      "description": "Specialized career guidance for university students and recent graduates, focusing on entry-level career planning.",
+      "pricing": "$60",
+      "duration": "60 minutes",
+      "dateTime": "14-12-24 11:00 AM-12:00 PM",
+      "counselor": {
+        "name": "Amy Foster",
+        "experience": "7 years",
+        "specialization": "Student Career Services"
+      },
+      "rating": 4.7,
+      "totalReviews": 203,
+      "features": [
+        "Major-to-career mapping",
+        "Internship guidance",
+        "Entry-level job search",
+        "Graduate school planning"
+      ],
+      "tags": ["Students", "Graduates", "Entry Level"],
+      "location": "University Career Center, Building B"
+    },
+    {
+      "id": 8,
+      "serviceName": "Job Search Strategy Group",
+      "category": "group",
+      "image": "https://via.placeholder.com/300x200/9FC2CC/331832?text=Job+Search+Group",
+      "description": "Collaborative group session focused on developing effective job search strategies and sharing experiences with peers.",
+      "pricing": "$35",
+      "duration": "90 minutes",
+      "dateTime": "16-12-24 6:00-7:30 PM",
+      "counselor": {
+        "name": "Robert Martinez",
+        "experience": "9 years",
+        "specialization": "Job Search Strategies"
+      },
+      "rating": 4.5,
+      "totalReviews": 178,
+      "features": [
+        "Job market analysis",
+        "Application strategies",
+        "Peer networking",
+        "Success tracking methods"
+      ],
+      "tags": ["Job Search", "Group Session", "Networking"],
+      "maxParticipants": 12,
+      "currentParticipants": 8
+    },
+    {
+      "id": 9,
+      "serviceName": "Entrepreneurship Mentorship Circle",
+      "category": "group",
+      "image": "https://via.placeholder.com/300x200/F1ECCE/1B5299?text=Entrepreneurship+Circle",
+      "description": "Group mentorship program for aspiring entrepreneurs and business owners to share ideas and receive guidance.",
+      "pricing": "$50",
+      "duration": "2 hours",
+      "dateTime": "18-12-24 7:00-9:00 PM",
+      "counselor": {
+        "name": "Patricia Evans",
+        "experience": "13 years",
+        "specialization": "Business Development"
+      },
+      "rating": 4.9,
+      "totalReviews": 95,
+      "features": [
+        "Business idea validation",
+        "Startup planning",
+        "Funding strategies",
+        "Mentor matching"
+      ],
+      "tags": ["Entrepreneurship", "Startup", "Business"],
+      "maxParticipants": 10,
+      "currentParticipants": 7
+    },
+    {
+      "id": 10,
+      "serviceName": "Women in Leadership Forum",
+      "category": "group",
+      "image": "https://via.placeholder.com/300x200/331832/F1ECCE?text=Women+Leadership",
+      "description": "Empowering group session designed specifically for women professionals seeking leadership roles and career advancement.",
+      "pricing": "$40",
+      "duration": "2 hours",
+      "dateTime": "20-12-24 5:00-7:00 PM",
+      "counselor": {
+        "name": "Dr. Rachel Green",
+        "experience": "14 years",
+        "specialization": "Women's Leadership"
+      },
+      "rating": 4.8,
+      "totalReviews": 142,
+      "features": [
+        "Leadership skills development",
+        "Work-life balance strategies",
+        "Confidence building",
+        "Mentorship opportunities"
+      ],
+      "tags": ["Women", "Leadership", "Professional Development"],
+      "maxParticipants": 15,
+      "currentParticipants": 12
+    }
+  ]
+  
+}
