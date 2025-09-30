@@ -15,6 +15,7 @@ import ContentDetailsPage_Layout from "./components/layout/ContentDetailsPage_La
 import ContentDetails from "./components/pages/ContentDetails.jsx";
 import SubscriptionPage_layout from "./components/layout/SubscriptionPage_Layout.jsx";
 import Subscription_Page from "./components/pages/Subscription_Page.jsx";
+import PrivateRoute from "./components/routes/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,11 +58,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/details",
-    element: <ContentDetailsPage_Layout></ContentDetailsPage_Layout>,
+    element: <PrivateRoute>
+                <ContentDetailsPage_Layout></ContentDetailsPage_Layout>
+              </PrivateRoute>,
     children: [
        {
     path: "/details/content/:id",
-    element: <ContentDetails></ContentDetails>
+    element: <PrivateRoute>
+                <ContentDetails></ContentDetails>
+             </PrivateRoute>
 
   },
     ]
