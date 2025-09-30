@@ -41,8 +41,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow font-bold text-lg"
-            style={{ backgroundColor: "#1B5299", color: "#F1ECCE" }}
+            className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow font-bold text-lg bg-[#1B5299] text-[#F1ECCE]"
           >
             <li>
               <Link to="/">Home</Link>

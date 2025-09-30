@@ -1,10 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEye, FaEyeSlash, FaGoogle, FaUser, FaImage } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { showError, showSuccess } from "../../utils/toast";
 
 const Register_Page = () => {
+      useEffect(() => {
+      document.title = "Find Light | Register";
+    }, []);
   const { createNewUser, setUser, updateUserProfile, signInWithGoogle } =
     useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);

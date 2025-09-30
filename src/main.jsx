@@ -13,6 +13,8 @@ import Profile_Page from "./components/pages/Profile_Page.jsx";
 import CategoryBasedContents from "./components/pages/CategoryBasedContents.jsx";
 import ContentDetailsPage_Layout from "./components/layout/ContentDetailsPage_Layout.jsx";
 import ContentDetails from "./components/pages/ContentDetails.jsx";
+import SubscriptionPage_layout from "./components/layout/SubscriptionPage_Layout.jsx";
+import Subscription_Page from "./components/pages/Subscription_Page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +64,16 @@ const router = createBrowserRouter([
     element: <ContentDetails></ContentDetails>
 
   },
+    ]
+  },
+  {
+    path:"/subscription",
+    element: <SubscriptionPage_layout></SubscriptionPage_layout>,
+    children: [
+      {
+        path:"/subscription",
+        element: <Subscription_Page></Subscription_Page>
+      }
     ]
   }
 ]);

@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
   const navigate = useNavigate();
+      useEffect(() => {
+      document.title = "Find Light | Page No Found";
+    }, []);
 
   return (
     <div className="min-h-screen bg-[#F1ECCE] flex items-center justify-center px-4">

@@ -4,6 +4,7 @@ import FeedbackSection from "../FeedbackSection";
 import { showBookingSuccess, showConfirm } from "../../utils/toast";
 
 const ContentDetails = () => {
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [service, setService] = useState(null);
@@ -53,6 +54,13 @@ const ContentDetails = () => {
     }
   };
 
+useEffect(() => {
+  if (service && service.serviceName) {
+    document.title = `Find Light | ${service.serviceName}`;
+  }
+}, [service]);
+
+
   return (
     <div className="bg-[#F1ECCE]">
 
@@ -86,7 +94,7 @@ const ContentDetails = () => {
             <div className="mb-6">
               <button
                 onClick={() => navigate(-1)}
-                className="flex items-center space-x-2 text-[#1B5299] hover:text-[#0d4085] transition-all duration-300"
+                className="flex items-center space-x-2 text-[#1B5299] hover:text-[#0d4085] transition-all duration-300 cursor-pointer "
               >
                 <span className="text-xl">←</span>
                 <span className="font-semibold">Back to Services</span>

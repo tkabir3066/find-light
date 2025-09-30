@@ -1,10 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEnvelope, FaArrowLeft } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { showError } from "../../utils/toast";
 
 const ForgotPassword_Page = () => {
+      useEffect(() => {
+      document.title = "Find Light | Password Recovery";
+    }, []);
   const { resetPassword } = useContext(AuthContext);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");

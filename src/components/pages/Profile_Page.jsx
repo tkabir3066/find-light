@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   FaUser,
   FaEnvelope,
@@ -11,6 +11,9 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { showError, showSuccess } from "../../utils/toast";
 
 const Profile_Page = () => {
+      useEffect(() => {
+      document.title = "Find Light | My Profile";
+    }, []);
   const { user, updateUserProfile } = useContext(AuthContext);
   const [isEditing, setIsEditing] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
