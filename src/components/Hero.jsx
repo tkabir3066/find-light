@@ -1,6 +1,38 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 const Hero = () => {
+  const slides = [
+    {
+      id: 1,
+      image:
+        "https://img.freepik.com/free-photo/man-being-interviewed-indoors-by-journalist_23-2149029359.jpg",
+      title: "Career Counseling",
+      description: "One-on-one guidance to discover your ideal career path",
+    },
+    {
+      id: 2,
+      image:
+        "https://img.freepik.com/free-photo/high-angle-coworkers-collaboration-office_23-2148339365.jpg",
+      title: "Professional Development",
+      description: "Enhance your skills and advance in your career",
+    },
+    {
+      id: 3,
+      image:
+        "https://img.freepik.com/free-photo/proud-businesswoman-explaining-her-plan_1098-3418.jpg",
+      title: "Interview Preparation",
+      description: "Ace your next interview with expert coaching",
+    },
+  ];
+
   return (
     <section
       className="p-3 flex flex-col justify-center items-center text-center px-6"
@@ -16,72 +48,64 @@ const Hero = () => {
         choices, and achieve their dreams.
       </p>
 
-      <div className="carousel w-full md:w-3/4 lg:w-1/2 mx-auto rounded-lg shadow-lg">
-        {/* Slide 1 */}
-        <div id="slide1" className="carousel-item relative w-full">
-          <img
-            src="https://img.freepik.com/free-photo/man-being-interviewed-indoors-by-journalist_23-2149029359.jpg"
-            className="w-full object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex justify-between items-center px-4">
-            <a
-              href="#slide3"
-              className="btn btn-circle bg-white/80 hover:bg-white"
-            >
-              ❮
-            </a>
-            <a
-              href="#slide2"
-              className="btn btn-circle bg-white/80 hover:bg-white"
-            >
-              ❯
-            </a>
-          </div>
-        </div>
+      {/* Swiper Slider */}
+      <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
+          loop={true}
+          className="rounded-lg shadow-lg overflow-hidden"
+          style={{ height: "400px" }}
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <div className="relative w-full h-full">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                />
 
-        {/* Slide 2 */}
-        <div id="slide2" className="carousel-item relative w-full">
-          <img
-            src="https://img.freepik.com/free-photo/high-angle-coworkers-collaboration-office_23-2148339365.jpg"
-            className="w-full object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex justify-between items-center px-4">
-            <a
-              href="#slide1"
-              className="btn btn-circle bg-white/80 hover:bg-white"
-            >
-              ❮
-            </a>
-            <a
-              href="#slide3"
-              className="btn btn-circle bg-white/80 hover:bg-white"
-            >
-              ❯
-            </a>
-          </div>
-        </div>
+                {/* Overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
-        {/* Slide 3 */}
-        <div id="slide3" className="carousel-item relative w-full">
-          <img
-            src="https://img.freepik.com/free-photo/proud-businesswoman-explaining-her-plan_1098-3418.jpg"
-            className="w-full object-cover rounded-lg"
-          />
-          <div className="absolute inset-0 flex justify-between items-center px-4">
-            <a
-              href="#slide2"
-              className="btn btn-circle bg-white/80 hover:bg-white"
-            >
-              ❮
-            </a>
-            <a
-              href="#slide1"
-              className="btn btn-circle bg-white/80 hover:bg-white"
-            >
-              ❯
-            </a>
-          </div>
-        </div>
+                {/* Slide content */}
+                <div className="absolute bottom-8 left-8 right-8 text-white text-left">
+                  <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>
+                  <p className="text-sm opacity-90">{slide.description}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+
+          {/* Custom Navigation Buttons */}
+          <div className="swiper-button-prev !w-10 !h-10 !text-white after:!text-sm !bg-white/20 !rounded-full backdrop-blur-sm hover:!bg-white/30 transition-all"></div>
+          <div className="swiper-button-next !w-10 !h-10 !text-white after:!text-sm !bg-white/20 !rounded-full backdrop-blur-sm hover:!bg-white/30 transition-all"></div>
+        </Swiper>
+      </div>
+
+      {/* Call to Action Button */}
+      <div className="mt-8">
+        <button className="bg-[#1B5299] text-[#F1ECCE] px-8 py-3 rounded-lg font-semibold hover:bg-[#0d4085] transition-all duration-300 text-lg">
+          Explore Our Services
+        </button>
       </div>
     </section>
   );
